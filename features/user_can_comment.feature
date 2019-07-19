@@ -9,8 +9,9 @@ Feature: User can comment posts
     | Fat Bob  |
     | Slim Jim |
     And the following post exists
-    | title        | text          | user    |
-    | Codeacademy  | Smooth-ride   | Fat Bob |
+    | title        | text          | category        | user     |
+    | Codeacademy  | Smooth-ride   | marketplace     | Fat Bob  |
+    | Hacklife     | smaaaahht     | general         | Slim Jim |
     And I am logged in as "Slim Jim"
     And I visit the site
     And I click "FLORUM"

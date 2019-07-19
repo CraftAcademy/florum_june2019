@@ -36,5 +36,7 @@ Then("show me the page") do
   save_and_open_page
 end
 
-
+When("I select {string} from {string}") do |option, selector|
+  select option, :from => selector
+end
 

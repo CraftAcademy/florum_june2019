@@ -10,17 +10,18 @@ Feature: Create posts
     And I am logged in as 'fatbob@gmail.com'
     And I visit the site
     And I click "FLORUM"
-    And I click "New Post"
+    And I click on "New Post"
 
   Scenario: Visitor successfully creates a post
     When I fill the "Title" with "Flower Power"
     And I fill the "Text" with "Flower Power to the people!!"
+    And I select "General" from "post[category]"
     And I click "Post"
     Then I should be on Posts index page
     And I should see "Your post was successfully created"
     And I should see "Flower Power"
     And I should see "Flower Power to the people!!"
-    And I should see "Writen By"
+    And I should see "Written By:"
     And I should see "Fat Bob"
 
   Scenario: Visitor doesn't enter a title or text for the post [Sad Path]

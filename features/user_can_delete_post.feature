@@ -9,8 +9,8 @@ I would like to able to delete it."
     | Fat Bob  |
     | Slim Jim |
     And the following post exists
-    | title        | text          | user    |
-    | Codeacademy  | Smooth-ride   | Fat Bob |
+    | title        | text          | user    | category |
+    | Codeacademy  | Smooth-ride   | Fat Bob | general  |
 
   Scenario: User can delete his post
     When I am logged in as "Fat Bob"  

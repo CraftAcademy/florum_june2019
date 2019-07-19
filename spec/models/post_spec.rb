@@ -5,11 +5,13 @@ RSpec.describe Post, type: :model do
     it { is_expected.to have_db_column :id }
     it { is_expected.to have_db_column :title }
     it { is_expected.to have_db_column :text }
+    it { is_expected.to have_db_column :category }
   end
 
   describe 'Validations' do
     it { is_expected.to validate_presence_of :title }
-    it { is_expected.to validate_presence_of :text } 
+    it { is_expected.to validate_presence_of :text }
+    it { is_expected.to validate_presence_of :category } 
   end
 
   describe 'Associations' do

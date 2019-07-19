@@ -11,6 +11,13 @@
       <%= form.label :text %><br>
       <%= form.text_area :text, placeholder: 'Text' %>
     </div>
+
+    <div>
+      <%= form.label "Category" %><br>
+      <%= form.select(:category, options_for_select([["General", "general"],
+      ["Marketplace", "marketplace"], ["Growth and Care", "growth_and_care"],
+      ["Plant News", "plant_news"]])) %>
+    </div>
     
     <div>
       <%= form.submit value: "Post" %>

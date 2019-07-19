@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /home/seth/Dropbox/Coding/CraftAcademy/Week6/florum_june2019/features/step_definitions/basic_steps.rb @ line 30 :
+
+    [1;34m25[0m: [32mend[0m
+    [1;34m26[0m: 
+    [1;34m27[0m: When([31m[1;31m"[0m[31mI click on {string}[1;31m"[0m[31m[0m) [32mdo[0m |string|
+    [1;34m28[0m:   first([33m:link[0m, string).click
+    [1;34m29[0m:   binding.pry
+ => [1;34m30[0m: [32mend[0m
+    [1;34m31[0m: 
+    [1;34m32[0m: When([31m[1;31m"[0m[31mI click {string}[1;31m"[0m[31m[0m) [32mdo[0m |string|
+    [1;34m33[0m:   click_on string
+    [1;34m34[0m: [32mend[0m
+    [1;34m35[0m: 
+

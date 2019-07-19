@@ -9,11 +9,11 @@ Feature: Open up posts
     | Fat Bob |
     | Slim Jim|
     And the following post exists
-    | title        | text          | user     |
-    | Codeacademy  | Smooth-ride   | Fat Bob  |
-    | Hacklife     | smaaaahht     | Slim Jim |
+    | title        | text          | category        | user     |
+    | Codeacademy  | Smooth-ride   | marketplace     | Fat Bob  |
+    | Hacklife     | smaaaahht     | general         | Slim Jim |
     And I am logged in as "Fat Bob"  
-   
+
   Scenario: Reader can open up posts
     When I visit the site
     And I click "FLORUM"
@@ -24,5 +24,3 @@ Feature: Open up posts
     And I should not see "Title: Hacklife"
     And I should not see "Text: smaaaahht"
     And I should not see "Author: Slim Jim"
-
-    

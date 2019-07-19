@@ -1,23 +1,84 @@
 <div class="container">
-  <%= link_to 'New Post', new_post_path %>
-  <table>
-    <tr>
-      <th>Title</th>
-      <th>Text</th>
-      <th>Writen By</th>
-    </tr>
-    <tr>
-      <% @posts.each do |post| %>
-          <td><%= post.title %></td>
-          <td><%= post.text %></td>
-          <td><%= post.user.name %></td>
-          <td><%= link_to 'Open', post_path(post) %></td>
-          <% if post.user.id == current_user.id %>
-            <td><%=link_to 'Delete', post_path(post),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+
+
+  <div class="forum-category">
+    <h3>MARKETPLACE</h3>
+    <ul>
+        <% @posts.each do |post| %>
+          <% if post.category === "marketplace" %>
+            <h4><%= post.title %></h4>
+            <li><%= post.text %></li>
+            <li><strong>Written By: </strong><%= post.user.name %></li>
+            <%= link_to 'Open', post_path(post) %>
+                  <% if post.user.id == current_user.id %>
+                    <%=link_to 'Delete', post_path(post),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %>
+                  <% end %>
           <% end %>
-      </tr>
-    <% end %>
-  </table>
+        <% end %>
+    </ul>
+  </div>
+  <%= link_to 'New Post', new_post_path %>
+
+  <div class="forum-category">
+    <h3>GENERAL</h3>
+    <ul>
+        <% @posts.each do |post| %>
+          <% if post.category === "general" %>
+            <h4><%= post.title %></h4>
+            <li><%= post.text %></li>
+            <li><strong>Written By: </strong><%= post.user.name %></li>
+            <%= link_to 'Open', post_path(post) %>
+                  <% if post.user.id == current_user.id %>
+                    <%=link_to 'Delete', post_path(post),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %>
+                  <% end %>
+          <% end %>
+        <% end %>
+    </ul>
+  </div>
+  <%= link_to 'New Post', new_post_path %>
+
+  <div class="forum-category">
+    <h3>GROWTH & CARE</h3>
+    <ul>
+        <% @posts.each do |post| %>
+          <% if post.category === "growth_and_care" %>
+            <h4><%= post.title %></h4>
+            <li><%= post.text %></li>
+            <li><strong>Written By: </strong><%= post.user.name %></li>
+            <%= link_to 'Open', post_path(post) %>
+                  <% if post.user.id == current_user.id %>
+                    <%=link_to 'Delete', post_path(post),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %>
+                  <% end %>
+          <% end %>
+        <% end %>
+    </ul>
+  </div>
+  <%= link_to 'New Post', new_post_path %>
+
+  <div class="forum-category">
+    <h3>PLANT NEWS</h3>
+    <ul>
+        <% @posts.each do |post| %>
+          <% if post.category === "plant_news" %>
+            <h4><%= post.title %></h4>
+            <li><%= post.text %></li>
+            <li><strong>Written By: </strong><%= post.user.name %></li>
+            <%= link_to 'Open', post_path(post) %>
+                  <% if post.user.id == current_user.id %>
+                    <%=link_to 'Delete', post_path(post),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %>
+                  <% end %>
+          <% end %>
+        <% end %>
+    </ul>
+  </div>
+  <%= link_to 'New Post', new_post_path %>
+
 </div>
